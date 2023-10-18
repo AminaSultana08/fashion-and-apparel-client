@@ -1,9 +1,28 @@
 
+import { useLoaderData } from "react-router-dom";
+import Banner from "./Banner";
+import Navbar from "./Navbar";
+import BrandsCards from "./Brands/BrandsCards";
+import Services from "./Services";
+import Footer from "../../Component/Footer/Footer";
+
 
 const Home = () => {
+    const brands = useLoaderData()
+    console.log(brands);
     return (
         <div>
-            <h1>this is Home Page</h1>
+        <Navbar></Navbar>
+        <Banner></Banner>
+            <div>
+                <div className="grid grid-cols-1 lg:grid-cols-3 mt-40 gap-7">
+                    {
+                        brands.map(brand=><BrandsCards key={brand.id} brand={brand} ></BrandsCards>)
+                    }
+                </div>
+            </div>
+            <Services></Services>
+            <Footer></Footer>
         </div>
     );
 };

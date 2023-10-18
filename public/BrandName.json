@@ -1,0 +1,32 @@
+[
+    {
+        "brand_id": 1,
+        "image": "https://i.ibb.co/f4Gyc6S/domino-164-6w-VEHf-I-unsplash.jpg",
+        "name": "Nike"
+    },
+    {
+        "brand_id": 2,
+        "image": "https://i.ibb.co/dtvL042/jason-blackeye-q-Siu4qckc-Hk-unsplash.jpg",
+        "name": "Adidas"
+    },
+    {
+        "brand_id": 3,
+        "image": "https://i.ibb.co/7KPYWKN/roomshot-YZ7uw8dk2vs-unsplash.jpg",
+        "name": "ZARA"
+    },
+    {
+        "brand_id": 4,
+        "image": "https://i.ibb.co/HBWyzVK/austin-burke-X83wa-YNJQp-E-unsplash.jpg",
+        "name": "Levi's"
+    },
+    {
+        "brand_id": 5,
+        "image": "https://i.ibb.co/gPyxNLM/johanne-pold-jacobsen-1-A5h-Sv-PZj-Mc-unsplash.jpg",
+        "name": "Gucci"
+    },
+    {
+        "brand_id": 6,
+        "image": "https://i.ibb.co/0rrVNym/meghna-r-i-N-Zmxm46-Oo-unsplash.jpg",
+        "name": "H&M"
+    }
+]

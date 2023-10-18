@@ -1,0 +1,8 @@
+.navbar.fixed{
+    background-color: white;
+    transition: .3s ease-in-out;
+}
+
+.navbar.fixed button{
+    background-color: antiquewhite;
+}
