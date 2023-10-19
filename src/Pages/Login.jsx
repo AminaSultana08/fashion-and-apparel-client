@@ -1,14 +1,18 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Footer from "../Component/Footer/Footer";
 import Navbar from "./Home/Navbar";
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { useContext } from "react";
 import { AuthContext } from "../Provider/AuthProvider";
+import swal from "sweetalert";
+import { useState } from "react";
 
 
 
 const Login = () => {
-  const {signInUser} = useContext(AuthContext)
+  const {signInUser,loginWithGoogle,loginWithGithub} = useContext(AuthContext)
+  const [success, setSuccess] = useState('')
+  const [error, setError]=useState('')
   const location = useLocation()
   const navigate = useNavigate()
   console.log('location here' ,location);
@@ -23,14 +27,42 @@ const Login = () => {
     signInUser(email,password)
     .then(result=>{
       console.log(result.user);
+      setSuccess(success)
+      swal('success', 'Login succeed')
       
       navigate(location?.state ? location.state : '/' )
     })
     .catch(error=>{
       console.error(error);
+      setError(error)
+      swal(error.message)
     })
 
 
+  }
+
+  const handleLoginGoogle = ()=>{
+    loginWithGoogle()
+    .then(result=>{
+      console.log(result.user);
+    })
+    .catch(error=>{
+      console.error(error);
+      setError(error)
+      swal(error.message)
+    })
+  }
+
+  const handleLoginGithub = ()=>{
+    loginWithGithub()
+    .then(result=>{
+      console.log(result.user);
+    })
+    .catch(error=>{
+      console.error(error);
+      setError(error)
+      swal(error.message)
+    })
   }
 
 
@@ -47,19 +79,13 @@ const Login = () => {
           <div className="text-center justify-center items-center md:text-left">
             <label className="mr-1 mt-10 ml-28 font-bold tet-4xl text-center">Sign in with</label>
             <button
+            onClick={handleLoginGoogle}
               type="button"
               className="mx-1 h-9 w-9 rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-[0_4px_9px_-4px_#3b71ca]">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="mx-auto h-3.5 w-3.5"
-                fill="currentColor"
-                viewBox="0 0 24 24">
-                <path
-                  d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
-              </svg>
+             <FaGoogle className="w-9"></FaGoogle>
             </button>
             <button
-            
+               onClick={handleLoginGithub}
               type="button"
               className="inline-block mx-1 h-9 w-9 rounded-full bg-blue-600 hover:bg-blue-700 uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca]">
              <FaGithub className="w-9" ></FaGithub>

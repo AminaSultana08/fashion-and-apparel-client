@@ -42,17 +42,21 @@ const handleLogOut =()=>{
            {navLink}
           </ul>
         </div>
-        <div className="navbar-end">
-        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+        <div className="navbar-end flex">
+        <label  tabIndex={0} className="btn btn-ghost btn-circle avatar ">
         <div className="w-10 rounded-full">
-          <img src="https://i.ibb.co/28ZfH6Z/customer-service.png" />
+          <img src={user?.photoURL} />
         </div>
         {
-          user? <button onClick={handleLogOut} className="btn">Log Out</button>
+          user? <  >
+          <span className="font-Signika font-bold ">{user.displayName}  </span>
+          <span>{user.photo} </span>
+          <button onClick={handleLogOut} className="btn bg-blue-600 text-white ">Log Out</button>
+          </>
           :
           <Link to='/login'><button className="btn btn-secondary" >Login</button> </Link>
-
-
+  
+  
         }
       </label>
          
