@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Footer from "../Component/Footer/Footer";
 import Navbar from "./Home/Navbar";
 import { FaGithub } from 'react-icons/fa';
@@ -9,6 +9,9 @@ import { AuthContext } from "../Provider/AuthProvider";
 
 const Login = () => {
   const {signInUser} = useContext(AuthContext)
+  const location = useLocation()
+  const navigate = useNavigate()
+  console.log('location here' ,location);
   const handleLogin=e=>{
     e.preventDefault()
     const form = e.target
@@ -20,6 +23,8 @@ const Login = () => {
     signInUser(email,password)
     .then(result=>{
       console.log(result.user);
+      
+      navigate(location?.state ? location.state : '/' )
     })
     .catch(error=>{
       console.error(error);

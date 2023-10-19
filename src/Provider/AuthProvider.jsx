@@ -22,13 +22,15 @@ const AuthProvider = ({children}) => {
      }
 
     const logOut =()=>{
+        setLoading(true)
         return signOut(auth)
     }
 
     useEffect(()=>{
       const unSubscribe =  onAuthStateChanged(auth , currentUser =>{
-            console.log('user in state' , currentUser);
+            console.log( currentUser);
             setUser(currentUser)
+            setLoading(false)
         })
         return ()=>{
             unSubscribe()
