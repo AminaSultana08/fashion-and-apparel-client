@@ -9,12 +9,12 @@ const AddProduct = () => {
     const form = e.target
     const name = form.name.value
     const photo = form.photo.value
-    const brand = form.brand.value
+    const brand_name = form.brand_name.value
     const product = form.product.value
     const description = form.description.value
     const rating = form.rating.value
     
-     const newProduct={name,photo,brand,product,description,rating}
+     const newProduct={name,photo,brand_name,product,description,rating}
   console.log(newProduct);
 
   //send data to server
@@ -65,7 +65,7 @@ const AddProduct = () => {
               <span className="label-text font-bold font-Montserrat ">Brand Type</span>
             </label>
            {/** <input type="text" placeholder="name" name="name"  className="input input-bordered " required /> */}
-           <select name="brand"  className="py-3 rounded-lg  border border-gray-300">
+           <select name="brand_name"  className="py-3 rounded-lg  border border-gray-300">
             <option value='brand'  >--Select Brand--</option>
             <option value='Nike'  >Nike</option>
             <option value='Adidas' >Adidas</option>

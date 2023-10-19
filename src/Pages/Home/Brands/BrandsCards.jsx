@@ -1,12 +1,12 @@
 
 
 const BrandsCards = ({brand}) => {
-    const{image,name} = brand
+    const{image,brand_name} = brand
     return (
         <div>
-        <div className="relative flex flex-col text-gray-700 mt-3 bg-yellow-50 shadow-md w-96 rounded-xl bg-clip-border">
+        <div className="relative flex flex-col bg-[url(https://i.ibb.co/0FnC2pz/10.p)] text-gray-700 mt-3  shadow-md w-96 rounded-xl bg-clip-border">
         <div className="relative h-56 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
-          <img className="w-full h-64"
+          <img className="w-full h-60"
             src={image}
             alt="img-blur-shadow"
             layout="fill"
@@ -14,7 +14,7 @@ const BrandsCards = ({brand}) => {
         </div>
         <div className="p-6">
           <h5 className="block mb-2 font-sans text-center text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-            {name}
+            {brand_name}
           </h5>
           
         </div>

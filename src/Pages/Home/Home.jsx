@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import BrandsCards from "./Brands/BrandsCards";
 import Services from "./Services";
 import Footer from "../../Component/Footer/Footer";
+import TopBrands from "./TopBrands";
 
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
                 </div>
             </div>
             <Services></Services>
+            <TopBrands></TopBrands>
             <Footer></Footer>
         </div>
     );
