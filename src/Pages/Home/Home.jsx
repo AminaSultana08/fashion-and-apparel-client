@@ -13,6 +13,7 @@ const Home = () => {
     console.log(brands);
     return (
         <div>
+        
         <Navbar></Navbar>
         <Banner></Banner>
             <div>

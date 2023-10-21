@@ -27,7 +27,7 @@ const SignUp = () => {
       setError('Password must be at least 6 characters or longer')
       return;
     }
-    else if (!/^(?=.*[!@#$%^&*])[A-Z!@#$%^&*]{6,}$/.test(password)) {
+    else if (!/^(?=.*[!@#$%^&*])[a-zA-Z!@#$%^&*]{6,}$/.test(password)) {
       setError('Password must have upper case and special characters')
       return
     }
@@ -39,8 +39,23 @@ const SignUp = () => {
     createUser(email,password)
     .then(result=>{
       console.log(result.user);
+      const user = {email}
+      fetch('http://localhost:5000/user',{
+        method:'POST',
+        headers:{
+          'content-type':'application/json'
+        },
+        body:JSON.stringify(user)
+      })
+      .then(res=>res.json())
+      .then(data=>{
+        console.log(data);
+      })
+     
       setSuccess(success)
       swal('success', 'Congratulations, You have Sign Up Successfully' )
+
+     
 
       updateProfile (result.user,{
         displayName:name,
@@ -50,6 +65,8 @@ const SignUp = () => {
         console.log('User profile updated')
         logOut()
         navigate('/login')
+
+      
         
     } )
       .catch(error=>{
@@ -72,7 +89,7 @@ const SignUp = () => {
   
     return (
     
-        <div className='bg-[url(https://i.ibb.co/QF12HD8/young-pretty-girl-choosing-trying-dresses-shop.jpg)] bg-cover h-screen w-screen bg-no-repeat' >
+        <div className='bg-red-50 h-auto w-screen bg-no-repeat' >
         
         <form onSubmit={handleSignup} className="card-body font-Signika  lg:w-1/2 md:3/4 mx-auto  ">
         <h1 className="text-2xl  font-bold mt-20 ">Create an Account</h1>

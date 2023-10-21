@@ -6,8 +6,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const Navbar = () => {
-   
-const {user, logOut}=useContext(AuthContext)
+  const {user, logOut}=useContext(AuthContext)
 
 const handleLogOut =()=>{
   logOut()
@@ -19,13 +18,14 @@ const handleLogOut =()=>{
     const navLink = <>
     <li><NavLink to='/' >Home </NavLink> </li>
     <li><NavLink to='/addProduct' >Add Product</NavLink> </li>
+    <li><NavLink to='/allProduct' >All Product</NavLink> </li>
     <li><NavLink to='/myCart' >My Cart</NavLink> </li>
     <li><NavLink to='/contact' >Contact</NavLink> </li>
     <li><NavLink to='/login' >Login</NavLink> </li>
     </> 
     return (
-        <div>
-        <div className="navbar bg-base-100 mb-10">
+        <div >
+        <div className="navbar bg-teal-100 mb-10">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -38,30 +38,34 @@ const handleLogOut =()=>{
           <img className="btn btn-ghost normal-case  h-24" src="https://i.ibb.co/5M0tt2s/dark-blue.png" alt=""/>
         </div>
         <div className="navbar-center hidden lg:flex">
+       
           <ul className="menu menu-horizontal px-1">
            {navLink}
           </ul>
+          
         </div>
-        <div className="navbar-end flex">
+        
+        <div className="navbar-end flex ">
+       
         <label  tabIndex={0} className="btn btn-ghost btn-circle avatar ">
-        <div className="w-10 rounded-full">
+        <div className="w-10 rounded-full flex">
           <img src={user?.photoURL} />
         </div>
         {
           user? <  >
           <span className="font-Signika font-bold ">{user.displayName}  </span>
           <span>{user.photo} </span>
-          <button onClick={handleLogOut} className="btn bg-blue-600 text-white ">Log Out</button>
+          <button onClick={handleLogOut} className="btn bg-teal-600 text-white ">Log Out</button>
           </>
           :
-          <Link to='/login'><button className="btn btn-secondary" >Login</button> </Link>
-  
+          <Link to='/login'><button className="btn bg-teal-600 mr-10" >Login</button> </Link>
   
         }
       </label>
          
         </div>
       </div>
+     
         </div>
     );
 };
