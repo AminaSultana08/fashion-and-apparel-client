@@ -1,8 +1,19 @@
 # React + Vite
+# My Website's Link
+ [Client side link](https://github.com/programming-hero-web-course-4/b8a10-brandshop-client-side-AminaSultana08)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ [Server side link](https://github.com/programming-hero-web-course-4/b8a10-brandshop-server-side-AminaSultana08)
 
-Currently, two official plugins are available:
+ [My Website LiveLink]()
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ # About my website 
+
+ *My website is about Fashion and Apparel. There are top 6 brands at my website.
+
+ *User can click the brand card and enter the brand details.
+
+ *User can add product and product will save at database.
+
+ *Brand details has Update and Details button
+
+ *User can update brand's product data and product will save at database and also updated data will show at product card .

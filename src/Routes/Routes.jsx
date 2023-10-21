@@ -34,13 +34,13 @@ const router = createBrowserRouter([
             {
                 path:'/updateProduct/:_id',
                 element:<UpdateProduct></UpdateProduct>,
-                loader:({params})=>fetch(`https://fashion-and-apparel-server-9sufeyhjb-amina-sultana-s-projects.vercel.app/product/${params._id}`),
+                loader:({params})=>fetch(`https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/product/${params._id}`),
                 
             },
             {
                 path:'/allProduct',
-                element:<AllProduct></AllProduct>,
-                loader:()=>fetch('https://fashion-and-apparel-server-9sufeyhjb-amina-sultana-s-projects.vercel.app/product')
+                element:<PrivateRoute><AllProduct></AllProduct></PrivateRoute>,
+                loader:()=>fetch('https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/product')
 
             },
             {
@@ -64,7 +64,7 @@ const router = createBrowserRouter([
             },{
                 path:'/singleProduct/:_id',
                 element:<SingleProduct></SingleProduct>,
-                loader:({params})=>fetch(`http://localhost:5000/product/${params.id}`)
+                loader:({params})=>fetch(`https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/product/${params.id}`)
             },
 
             {

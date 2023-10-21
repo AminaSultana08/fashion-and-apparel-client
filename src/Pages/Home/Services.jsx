@@ -2,7 +2,8 @@
 
 const Services = () => {
     return (
-        <div className="mt-10 bg-[url(https://i.ibb.co/F3BYPX2/13.jpg)] p-10">
+        <div data-aos="fade-up"
+        data-aos-anchor-placement="center-bottom" className="mt-10 bg-[url(https://i.ibb.co/F3BYPX2/13.jpg)] p-10">
        
         <div className="grid grid-cols-1 font-Signika lg:grid-cols-3 gap-6 justify-center">
             <div className="flex items-center gap-2">

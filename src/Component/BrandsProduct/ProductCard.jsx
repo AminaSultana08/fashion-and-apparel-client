@@ -1,14 +1,22 @@
 import { FaStar } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
-
+import Aos from 'aos'
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 const ProductCard = ({product}) => {
     
     const {_id,name,photo,brand_name,type ,price,description,rating} = product
+
+    useEffect(()=>{
+      Aos.init({duration:2000})
+    } ,[])
+  
+
     return (
         <div >
-        <div className="relative flex flex-col text-gray-700 bg-teal-50 shadow-md w-96 rounded-xl bg-clip-border">
+        <div data-aos="zoom-out-down" className="relative flex flex-col text-gray-700 bg-teal-50 shadow-md w-96 rounded-xl bg-clip-border">
   <div className="relative mx-4 mt-4 overflow-hidden text-teal-700 bg-teal-50 shadow-lg h-80 rounded-xl bg-clip-border">
     <img src={photo} alt="profile-picture" />
   </div>

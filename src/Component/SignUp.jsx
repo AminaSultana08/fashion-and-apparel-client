@@ -40,7 +40,7 @@ const SignUp = () => {
     .then(result=>{
       console.log(result.user);
       const user = {email}
-      fetch('https://fashion-and-apparel-server-9sufeyhjb-amina-sultana-s-projects.vercel.app/user',{
+      fetch('https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/user',{
         method:'POST',
         headers:{
           'content-type':'application/json'

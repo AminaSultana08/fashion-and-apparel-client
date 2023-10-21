@@ -21,7 +21,7 @@ const AddProduct = () => {
   console.log(newProduct);
 
   //send data to server
-  fetch('https://fashion-and-apparel-server-9sufeyhjb-amina-sultana-s-projects.vercel.app/product',{
+  fetch('https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/product',{
     method:'POST',
     headers:{
       'content-type':'application/json'
@@ -101,7 +101,7 @@ const AddProduct = () => {
            <Rating></Rating>
           </div>
          
-          <input type="submit" value="Add Product" className="btn btn-block mt-6 mb-10 text-white bg-teal-500"/>
+          <input type="submit" value="Add Product" className="btn btn-block hover:bg-teal-600 mt-6 mb-10 text-white bg-teal-500"/>
             </div>
         </form>
        

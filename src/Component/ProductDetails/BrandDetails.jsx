@@ -19,7 +19,7 @@ const BrandDetails = ({product}) => {
 
   
   useEffect(()=>{
-    fetch("https://fashion-and-apparel-server-9sufeyhjb-amina-sultana-s-projects.vercel.app/product")
+    fetch("https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/product")
     .then(res=>res.json())
     .then(data=>setData(data))
 },[])
@@ -77,9 +77,9 @@ console.log(singleProduct);
               ) 
               : ( 
                 products?.map(product=> <div key={product.brand_id}>
-                  <div className="flex  justify-center mb-7 gap-5 items-center max-w-6xl mx-auto">
+                  <div   className="flex  justify-center mb-7 gap-5 items-center max-w-6xl mx-auto">
                    
-                  <div className="relative  flex flex-col text-gray-700 bg-teal-50 shadow-md w-96 rounded-xl bg-clip-border">
+                  <div  className="relative  flex flex-col text-gray-700 bg-teal-50 shadow-md w-96 rounded-xl bg-clip-border">
                   <div className="relative mx-4 mt-4 overflow-hidden text-teal-700 bg-teal-50 shadow-lg h-80 rounded-xl bg-clip-border">
                     <img src={product?.photo} alt="profile-picture" />
                   </div>

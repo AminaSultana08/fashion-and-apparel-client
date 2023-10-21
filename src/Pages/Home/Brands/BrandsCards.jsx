@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
-
+import Aos from 'aos'
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 
 const BrandsCards = ({brand}) => {
     const{brand_id,image,brand_name} = brand
+
+    useEffect (()=>{
+      Aos.init({duration:2000})
+    } ,[])
+
     return (
         <div>
-        <div className="relative flex flex-col bg-[url(https://i.ibb.co/0FnC2pz/10.p)] text-gray-700 mt-3  shadow-md w-96 rounded-xl bg-clip-border">
+        <div  data-aos="zoom-out-right" className="relative flex flex-col bg-[url(https://i.ibb.co/0FnC2pz/10.p)] text-gray-700 mt-3  shadow-md w-96 rounded-xl bg-clip-border">
         <div className="relative h-60 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-teal-50 bg-clip-border shadow-blue-gray-500/40">
           <img className="w-full h-60"
             src={image}

@@ -2,8 +2,8 @@
 
 const MyCart = () => {
     return (
-        <div>
-            cart is adding
+        <div className=" m-20">
+           <h1 className="text-center font-Signika font-bold text-4xl">Sorry! Couldn't do the task! </h1>
         </div>
     );
 };
