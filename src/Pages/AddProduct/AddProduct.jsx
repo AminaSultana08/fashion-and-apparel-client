@@ -21,7 +21,7 @@ const AddProduct = () => {
   console.log(newProduct);
 
   //send data to server
-  fetch('http://localhost:5000/product',{
+  fetch('https://fashion-and-apparel-server-9sufeyhjb-amina-sultana-s-projects.vercel.app/product',{
     method:'POST',
     headers:{
       'content-type':'application/json'
@@ -75,7 +75,7 @@ const AddProduct = () => {
             <option value='Adidas' >Adidas</option>
             <option value='ZARA' >ZARA</option>
             <option value="Levi's" >Levi's</option>
-            <option value='Gucchi' >Gucci</option>
+            <option value='Gucci' >Gucci</option>
             <option  value='H&M'>H&M</option>
            </select>
           </div>

@@ -5,7 +5,7 @@ import { useState } from "react";
 import Footer from "../Footer/Footer";
 
 
-const AllProduct = () => {
+const AllProduct = ({product}) => {
     const products = useLoaderData()
     const [dataLength , setDataLength] = useState(6)
     

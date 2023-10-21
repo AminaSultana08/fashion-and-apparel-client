@@ -40,7 +40,7 @@ const SignUp = () => {
     .then(result=>{
       console.log(result.user);
       const user = {email}
-      fetch('http://localhost:5000/user',{
+      fetch('https://fashion-and-apparel-server-9sufeyhjb-amina-sultana-s-projects.vercel.app/user',{
         method:'POST',
         headers:{
           'content-type':'application/json'
@@ -89,31 +89,31 @@ const SignUp = () => {
   
     return (
     
-        <div className='bg-red-50 h-auto w-screen bg-no-repeat' >
+        <div className='bg-teal-50 h-auto w-screen bg-no-repeat   text-teal-700' >
         
-        <form onSubmit={handleSignup} className="card-body font-Signika  lg:w-1/2 md:3/4 mx-auto  ">
+        <form onSubmit={handleSignup} className="card-body font-Signika text-teal-700 lg:w-1/2 md:3/4 mx-auto  ">
         <h1 className="text-2xl  font-bold mt-20 ">Create an Account</h1>
         <div className="form-control  ">
           <label className="label">
-            <span className="label-text font-bold   "> Name</span>
+            <span className="label-text font-bold  text-teal-700 "> Name</span>
           </label>
           <input type="text" placeholder="your Name"   name="name" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text font-bold  ">Photo</span>
+            <span className="label-text font-bold text-teal-700 ">Photo</span>
           </label>
           <input type="url" placeholder="photo-url"  name="photo" src="url" className="input input-bordered" required />
         </div>
         <div className="form-control">
           <label className="label">
-            <span className="label-text font-bold  ">Email</span>
+            <span className="label-text font-bold text-teal-700 ">Email</span>
           </label>
           <input type="email" placeholder="email" name="email" className="input input-bordered" required />
         </div>
         <div className="form-control  relative">
           <label className="label">
-            <span className="label-text font-bold  ">Password</span>
+            <span className="label-text font-bold text-teal-700 ">Password</span>
           </label>
           <input type= {showPassword? 'text': "password" }
           placeholder="password" name="password" className="input input-bordered relative " required />
@@ -126,7 +126,7 @@ const SignUp = () => {
 
         </div>
         <div className="text-center  md:text-left">
-        <button className="mt-4 flex ml-64 bg-blue-600 hover:bg-blue-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit">Sign Up</button>
+        <button className="mt-4 flex ml-64 bg-teal-600 hover:bg-teal-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit">Sign Up</button>
       </div>
 
        
@@ -137,8 +137,8 @@ const SignUp = () => {
       }
 
 
-      <div className="mt-4  flex font-semibold text-2xl text-black font-Signika justify-center text-center md:text-left">
-      Already have an account? <Link to='/login'  className="text-blue-800  hover:underline hover:underline-offset-4" >Login</Link>
+      <div className="mt-4 flex font-semibold pb-20 text-2xl text-teal-700 font-Signika justify-center text-center md:text-left">
+      Already have an account? <Link to='/login'  className="text-blue-700  hover:underline hover:underline-offset-4" >Login</Link>
       </div>
       
       </div>

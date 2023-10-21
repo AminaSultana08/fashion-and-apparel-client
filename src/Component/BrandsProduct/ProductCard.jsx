@@ -19,7 +19,7 @@ const ProductCard = ({product}) => {
   </h4>
   <p className="flex items-center font-Signika text-teal-700 ">{rating} <FaStar className="w-3 text-teal-600"></FaStar> </p>
    </div>
-    <p className="block  text-base antialiased font-medium leading-relaxed text-transparent bg-gradient-to-tr  font-Signika text-teal-700 bg-clip-text">
+    <p className="block  text-lg antialiased font-medium leading-relaxed  font-Signika text-teal-700 ">
     {brand_name}
     </p>
   </div>
