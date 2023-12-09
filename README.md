@@ -1,9 +1,3 @@
- 
-## My Website's Link
- [Client side link](https://github.com/programming-hero-web-course-4/b8a10-brandshop-client-side-AminaSultana08)
-
- [Server side link](https://github.com/programming-hero-web-course-4/b8a10-brandshop-server-side-AminaSultana08)
-
 
  ## About my website 
 
