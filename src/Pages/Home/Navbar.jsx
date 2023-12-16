@@ -16,16 +16,31 @@ const handleLogOut =()=>{
 }
     
     const navLink = <>
-    <li><NavLink to='/' >Home </NavLink> </li>
-    <li><NavLink to='/addProduct' >Add Product</NavLink> </li>
-    <li><NavLink to='/allProduct' >All Product</NavLink> </li>
-    <li><NavLink to='/myCart' >My Cart</NavLink> </li>
-    <li><NavLink to='/contact' >Contact</NavLink> </li>
-    <li><NavLink to='/login' >Login</NavLink> </li>
+    <li><NavLink to='/' className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "text-blue-800 underline" : ""
+  } >Home </NavLink> </li>
+    <li><NavLink to='/addProduct' className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "text-blue-800 underline" : ""
+  } >Add Product</NavLink> </li>
+    <li><NavLink to='/allProduct' className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "text-blue-800 underline" : ""
+  } >All Product</NavLink> </li>
+    <li><NavLink to='/myCart' className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "text-blue-800 underline" : ""
+  } >My Cart</NavLink> </li>
+    <li><NavLink to='/contact' className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "text-blue-800 underline" : ""
+  } >Contact</NavLink> </li>
+    {/* <li><NavLink to='/login' >Login</NavLink> </li> */}
+    {
+      user ? <>
+     
+      <button onClick={handleLogOut} className="bg-black p-1  flex justify-center items-center gap-1 text-white rounded-xl px-2" type=""> LogOut</button></> : <><li><Link to='/login'>Login</Link> </li></>
+  }
     </> 
     return (
         <div >
-        <div className="navbar bg-teal-100 mb-10">
+        <div className="navbar bg-teal-100 ">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,12 +61,13 @@ const handleLogOut =()=>{
         </div>
         
         <div className="navbar-end flex ">
-       
+        <span className="font-serif font-bold text-sm ">{user.displayName}  </span>
         <label  tabIndex={0} className="btn btn-ghost btn-circle avatar ">
         <div className="w-10 rounded-full flex">
+        
           <img src={user?.photoURL} />
         </div>
-        {
+       {/*  {
           user? <  >
           <span className="font-Signika font-bold ">{user.displayName}  </span>
           <span>{user.photo} </span>
@@ -60,7 +76,7 @@ const handleLogOut =()=>{
           :
           <Link to='/login'><button className="btn bg-teal-600 mr-10" >Login</button> </Link>
   
-        }
+        } */}
       </label>
          
         </div>
