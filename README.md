@@ -8,7 +8,7 @@
 
  # About my website 
 
- *My website is about Fashion and Apparel. There are top 6 brands at my website.
+ *My website is about Fashion and Apparel.It's an e-commerce website. There are top 6 brands at my website.
 
  *User can click the brand card and enter the brand details.
 
