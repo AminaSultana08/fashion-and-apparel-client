@@ -77,11 +77,11 @@ const Login = () => {
        
         <div className="md:w-1/3 max-w-sm ">
           <div className="text-center justify-center items-center md:text-left">
-            <label className="mr-1 mt-10 ml-28 font-bold tet-4xl text-teal-700 font-Signika text-center">Sign in with</label>
+            <label className="mr-1 mt-10 lg:ml-28 md:ml-3 ml-7 font-bold text-xl text-teal-700 font-Signika text-center"> <span className="text-teal-300"> Sign in</span> with</label>
             <button
             onClick={handleLoginGoogle}
               type="button"
-              className="mx-1 h-9 w-9 rounded-full bg-teal-500 hover:bg-teal-600 text-white shadow-[0_4px_9px_-4px_#3b71ca]">
+              className="mx-1 h-9 w-9 rounded-full bg-teal-500 hover:bg-teal-100 text-white shadow-[0_4px_9px_-4px_#3b71ca]">
              <FaGoogle className="w-9"></FaGoogle>
             </button>
             <button
@@ -91,19 +91,19 @@ const Login = () => {
              <FaGithub className="w-9" ></FaGithub>
             </button>
           </div>
-          <div className="my-5 flex items-center before:mt-0.5 before:flex-1 before:border-t-2 before:border-teal-900 after:mt-0.5 after:flex-1 after:border-t-2 after:border-teal-900">
+          <div className="my-5 flex items-center before:mt-0.5 before:flex-1 before:border-t-2 px-5 before:border-teal-900 after:mt-0.5 after:flex-1 after:border-t-2 after:border-teal-900">
             <p className="mx-4 mb-0 text-center font-semibold text-xl text-teal-800">Or</p>
           </div>
         <form onSubmit={handleLogin}>
-        <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded" type="text" name="email" placeholder="Email Address " required />
-        <input className="text-sm w-full px-4 py-2 border border-solid border-gray-300 rounded mt-4" type="password" name="password" placeholder="Password" required />
+        <input className="text-sm lg:w-full md:w-full w-80 mx-8 md:mx-0 px-4 py-2 border border-solid border-gray-300 rounded" type="text" name="email" placeholder="Email Address " required />
+        <input className="text-sm lg:w-full md:w-full w-80 mx-8 md:mx-0   px-4 py-2 border border-solid border-gray-300 rounded mt-4" type="password" name="password" placeholder="Password" required />
        
         <div className="text-center  md:text-left">
-          <button className="mt-4 ml-40 bg-teal-600 hover:bg-teal-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider  font-Signika" type="submit">Login</button>
+          <button className="mt-4 md:ml-20 lg:ml-32 mx-40 bg-teal-600 hover:bg-teal-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider flex lg:justify-center lg:items-center md:justify-center md:items-center font-Signika" type="submit">Login</button>
         </div>
         </form>
-          <div className="mt-4 font-semibold font-Signika text-sm text-teal-700 ml-28 text-center md:text-left">
-            Don't have an account? <Link to='/signup'  className="text-teal-900 font-Signika hover:underline hover:underline-offset-4" >Register</Link>
+          <div className="mt-4 font-semibold flex justify-center font-Signika text-sm text-teal-700 mx-10 text-center md:text-left">
+            Don't have an account? <Link to='/signup'  className="text-teal-900 font-Signika hover:underline hover:underline-offset-4 pl-2 underline" > Register</Link>
           </div>
         </div>
       </section>

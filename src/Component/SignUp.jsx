@@ -109,7 +109,7 @@ const SignUp = () => {
           <label className="label">
             <span className="label-text font-bold text-teal-700 ">Email</span>
           </label>
-          <input type="email" placeholder="email" name="email" className="input input-bordered" required />
+          <input type="email" placeholder="email" name="email" className="input w-full input-bordered" required />
         </div>
         <div className="form-control  relative">
           <label className="label">
@@ -126,7 +126,7 @@ const SignUp = () => {
 
         </div>
         <div className="text-center  md:text-left">
-        <button className="mt-4 flex ml-64 bg-teal-600 hover:bg-teal-700 px-4 py-2 text-white uppercase rounded text-xs tracking-wider" type="submit">Sign Up</button>
+        <button className="mt-4 flex mx-28 md:w-64   md:ml-44 lg:mx-20 xl:mx-40 md:pl-28 bg-teal-600 hover:bg-teal-700 px-4 py-3 text-white uppercase rounded-lg text-xs tracking-wider" type="submit">Sign Up</button>
       </div>
 
        
@@ -138,7 +138,7 @@ const SignUp = () => {
 
 
       <div className="mt-4 flex font-semibold pb-20 text-2xl text-teal-700 font-Signika justify-center text-center md:text-left">
-      Already have an account? <Link to='/login'  className="text-blue-700  hover:underline hover:underline-offset-4" >Login</Link>
+      Already have an account? <Link to='/login'  className="text-teal-700 underline pl-2  hover:underline hover:underline-offset-4" >Login</Link>
       </div>
       
       </div>

@@ -12,7 +12,7 @@ const BrandsCards = ({brand}) => {
 
     return (
         <div>
-        <div  data-aos="zoom-out-right" className="relative flex flex-col bg-[url(https://i.ibb.co/0FnC2pz/10.p)] text-gray-700 mt-3  shadow-md w-96 rounded-xl bg-clip-border">
+        <div  data-aos="zoom-out-right" className="relative flex flex-col bg-[url(https://i.ibb.co/0FnC2pz/10.p)] text-gray-700 mt-3  shadow-md lg:w-72 xl:w-96 lg:mx-3 md:w-80 w-72 mx-11 mb-10 md:mb-10 md:mx-2 rounded-xl bg-clip-border">
         <div className="relative h-60 mx-4 -mt-6 overflow-hidden text-white shadow-lg rounded-xl bg-teal-50 bg-clip-border shadow-blue-gray-500/40">
           <img className="w-full h-60"
             src={image}

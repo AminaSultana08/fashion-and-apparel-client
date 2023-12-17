@@ -5,7 +5,7 @@ const Services = () => {
         <div data-aos="fade-up"
         data-aos-anchor-placement="center-bottom" className="mt-10 bg-[url(https://i.ibb.co/F3BYPX2/13.jpg)] p-10">
        
-        <div className="grid grid-cols-1 font-Signika lg:grid-cols-3 gap-6 justify-center">
+        <div className="grid grid-cols-1 font-Signika lg:grid-cols-3 md:grid-cols-3 justify-center items-center gap-6 xl:mx-10 xl:ml-32">
             <div className="flex items-center gap-2">
                 <img className="w-14 h-14" src="https://i.ibb.co/Xp5gDff/box.png" alt=""/>
                 <div>
