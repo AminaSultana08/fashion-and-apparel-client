@@ -1,12 +1,10 @@
-import React from 'react';
-import Navbar from './Home/Navbar';
-import Footer from '../Component/Footer/Footer';
+
 import { FaPhoneAlt } from 'react-icons/fa';
 import { GrLocation, GrMailOption } from "react-icons/gr";
 const Contact = () => {
     return (
         <div>
-          <Navbar></Navbar>
+         
             <div  className='bg-[url(https://i.ibb.co/RDZk4Gs/82239.jpg)] mx-auto max-w-6xl bg-no-repeat flex items-center justify-center bg-cover h-full'>
             <div className="relative flex flex-col text-gray-700 bg-white shadow-md max-w-4xl rounded-xl bg-clip-border m-20  ">
             <div className="relative grid mx-4 mb-4 -mt-6 overflow-hidden text-white shadow-lg h-28 place-items-center rounded-xl bg-gradient-to-tr from-teal-900 to-teal-500 bg-clip-border shadow-teal-500/40">
@@ -37,7 +35,7 @@ const Contact = () => {
             </div>
           </div>
             </div>
-            <Footer></Footer>
+           
         </div>
     );
 };
