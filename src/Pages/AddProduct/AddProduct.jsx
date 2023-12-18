@@ -1,8 +1,8 @@
 
 import Swal from "sweetalert2";
-import Navbar from "../Home/Navbar";
+
 import Rating from "../../Component/Rating/Rating";
-import Footer from "../../Component/Footer/Footer";
+
 
 
 const AddProduct = () => { 
@@ -21,7 +21,7 @@ const AddProduct = () => {
   console.log(newProduct);
 
   //send data to server
-  fetch('https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/product',{
+  fetch('https://fashion-and-apparel-server-three.vercel.app/product',{
     method:'POST',
     headers:{
       'content-type':'application/json'
@@ -46,7 +46,7 @@ const AddProduct = () => {
 
     return (
        <div>
-       <Navbar></Navbar>
+      
        <div className="bg-[url(https://i.ibb.co/nsfFf1F/13.jpg)] bg-cover bg-no-repeat h-auto text-teal-800 font-Signika ">
        <h1 className="front-semibold text-4xl  text-center">Add a Product</h1>
        
@@ -107,7 +107,7 @@ const AddProduct = () => {
        
    </div>
    
-<Footer></Footer>
+
        </div>
        
     );

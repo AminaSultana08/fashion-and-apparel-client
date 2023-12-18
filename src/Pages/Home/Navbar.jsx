@@ -25,13 +25,13 @@ const handleLogOut =()=>{
     <li><NavLink to='/allProduct' className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "text-blue-800 underline" : ""
   } >All Product</NavLink> </li>
-   {/*  <li><NavLink to='/myCart' className={({ isActive, isPending }) =>
+     <li><NavLink to='/myCart' className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "text-blue-800 underline" : ""
-  } >My Cart</NavLink> </li> */}
+  } >My Cart</NavLink> </li> 
     <li><NavLink to='/contact' className={({ isActive, isPending }) =>
     isPending ? "pending" : isActive ? "text-blue-800 underline" : ""
   } >Contact</NavLink> </li>
-    {/* <li><NavLink to='/login' >Login</NavLink> </li> */}
+    
     {
       user ? <>
      

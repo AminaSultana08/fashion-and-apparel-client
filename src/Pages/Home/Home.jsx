@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <div>
         
-        <Navbar></Navbar>
+        
         <Banner></Banner>
             <div>
                 <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 pt-28 lg:gap-4 md:gap-3">
@@ -25,7 +25,7 @@ const Home = () => {
             </div>
             <Services></Services>
             <TopBrands></TopBrands>
-            <Footer></Footer>
+            
         </div>
     );
 };

@@ -1,4 +1,3 @@
-import React from 'react';
 
 const SingleProductCard = ({product}) => {
     const{name,photo,brand_name,type ,price,description,rating} = product
@@ -14,12 +13,10 @@ const SingleProductCard = ({product}) => {
         </div>
         <div className="p-6">
           <h5 className="block mb-2 font-sans text-xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-            UI/UX Review Check
+            {brand_name}
           </h5>
           <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit">
-            The place is close to Barceloneta Beach and bus stop just 2 min by walk
-            and near to "Naviglio" where you can enjoy the main night life in
-            Barcelona.
+            {description}
           </p>
         </div>
         <div className="p-6 pt-0">
@@ -28,7 +25,7 @@ const SingleProductCard = ({product}) => {
             type="button"
             data-ripple-light="true"
           >
-            Read More
+            Add To Cart
           </button>
         </div>
       </div>

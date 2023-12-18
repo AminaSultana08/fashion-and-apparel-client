@@ -19,7 +19,7 @@ const BrandDetails = ({product}) => {
 
   
   useEffect(()=>{
-    fetch("https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/product")
+    fetch("https://fashion-and-apparel-server-three.vercel.app/product")
     .then(res=>res.json())
     .then(data=>setData(data))
 },[])

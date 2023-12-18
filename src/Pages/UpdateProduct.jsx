@@ -22,7 +22,7 @@ const UpdateProduct = () => {
          const updatedProduct={name,photo,brand_name,type ,price,description,rating}
       console.log(updatedProduct);
 
-      fetch(` https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/product/${_id}`,{
+      fetch(` https://fashion-and-apparel-server-three.vercel.app/product/${_id}`,{
         method:'PUT',
         headers:{
           'content-type':'application/json'

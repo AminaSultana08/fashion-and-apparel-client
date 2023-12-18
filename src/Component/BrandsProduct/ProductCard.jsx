@@ -16,8 +16,8 @@ const ProductCard = ({product}) => {
 
     return (
         <div >
-        <div data-aos="zoom-out-down" className="relative flex flex-col text-gray-700 bg-teal-50 shadow-md w-96 rounded-xl bg-clip-border">
-  <div className="relative mx-4 mt-4 overflow-hidden text-teal-700 bg-teal-50 shadow-lg h-80 rounded-xl bg-clip-border">
+        <div data-aos="zoom-out-down" className="relative flex flex-col text-gray-700 bg-teal-50 shadow-md w-72 lg:mx-1 rounded-xl bg-clip-border md:mx-5 mx-10  ">
+  <div className="relative mx-4  mt-4 overflow-hidden text-teal-700 bg-teal-50 shadow-lg h-72 rounded-xl bg-clip-border">
     <img src={photo} alt="profile-picture" />
   </div>
   <div className="p-6 text-center font-Signika text-teal-700">
@@ -40,7 +40,7 @@ const ProductCard = ({product}) => {
     <Link to={`updateProduct/${_id}`} >
     <button className="btn bg-teal-500 text-white font-Signika" >Edit</button>
      </Link>
-    <Link><button className="btn bg-teal-500 text-white font-Signika " type=""> Details</button> </Link>
+    <Link to={`/singleProduct/${_id}`}  ><button className="btn bg-teal-500 text-white font-Signika " type=""> Details</button> </Link>
   </div>
 </div>
         </div>

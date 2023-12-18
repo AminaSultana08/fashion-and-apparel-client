@@ -5,6 +5,7 @@ import { useState } from "react";
 import swal from "sweetalert";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { updateProfile } from "firebase/auth";
+import Swal from "sweetalert2";
 
 
 const SignUp = () => {
@@ -20,17 +21,17 @@ const SignUp = () => {
     const photo = form.photo.value
     const email = form . email.value
     const password= form.password.value
-    
-    console.log(name,photo,email,password);
+    const user={name,photo,email,password}
+    console.log(user);
 
     if(password.length>6){
       setError('Password must be at least 6 characters or longer')
       return;
     }
-    else if (!/^(?=.*[!@#$%^&*])[a-zA-Z!@#$%^&*]{6,}$/.test(password)) {
-      setError('Password must have upper case and special characters')
-      return
-    }
+    // else if (!/^(?=.*[!@#$%^&*])[a-zA-Z!@#$%^&*]{6,}$/.test(password)) {
+    //   setError('Password must have upper case and special characters')
+    //   return
+    // }
 
 
     setSuccess('')
@@ -39,8 +40,9 @@ const SignUp = () => {
     createUser(email,password)
     .then(result=>{
       console.log(result.user);
-      const user = {email}
-      fetch('https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/user',{
+      
+      const user = {email,name,photo}
+      fetch('https://fashion-and-apparel-server-three.vercel.app/user',{
         method:'POST',
         headers:{
           'content-type':'application/json'
@@ -50,8 +52,18 @@ const SignUp = () => {
       .then(res=>res.json())
       .then(data=>{
         console.log(data);
+        if(data.insertedId){
+          Swal.fire({
+            title: 'Success',
+            text: 'User has been added successfully',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
+        }
       })
      
+      
+
       setSuccess(success)
       swal('success', 'Congratulations, You have Sign Up Successfully' )
 

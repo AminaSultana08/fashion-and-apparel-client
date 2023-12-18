@@ -15,65 +15,85 @@ import BrandDetails from "../Component/ProductDetails/BrandDetails";
 import Contact from "../Pages/Contact";
 import SingleProduct from "../Component/SingleProduct";
 
-
 const router = createBrowserRouter([
-    {
-        path:'/',
-        element:<Root></Root>,
-        errorElement:<ErrorPage></ErrorPage>,
-        children:[
-            {
-                path:'/',
-                element:<Home></Home>,
-                loader:()=>fetch('BrandName.json')
-            },
-            {
-                path:'/addProduct',
-                element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
-            },
-            {
-                path:'/updateProduct/:_id',
-                element:<UpdateProduct></UpdateProduct>,
-                loader:({params})=>fetch(`https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/product/${params._id}`),
-                
-            },
-            {
-                path:'/allProduct',
-                element:<PrivateRoute><AllProduct></AllProduct></PrivateRoute>,
-                loader:()=>fetch('https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/product')
+  {
+    path: "/",
+    element: <Root></Root>,
+    errorElement: <ErrorPage></ErrorPage>,
+    children: [
+      {
+        path: "/",
+        element: <Home></Home>,
+        loader: () => fetch("BrandName.json"),
+      },
+      {
+        path: "/addProduct",
+        element: (
+          <PrivateRoute>
+            <AddProduct></AddProduct>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/updateProduct/:_id",
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({ params }) =>
+          fetch(
+            `https://fashion-and-apparel-server-three.vercel.app/product/${params._id}`
+          ),
+      },
+      {
+        path: "/allProduct",
+        element: (
+          <PrivateRoute>
+            <AllProduct></AllProduct>
+          </PrivateRoute>
+        ),
+        loader: () =>
+          fetch(
+            "https://fashion-and-apparel-server-three.vercel.app/product"
+          ),
+      },
+      {
+        path: "/myCart",
+        element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
+    },
 
-            },
-            {
-                path:'/myCart',
-                element:<PrivateRoute><MyCart></MyCart></PrivateRoute>
-            },
-            {
-                path:'/signup',
-                element:<SignUp></SignUp>
-            },
-            {
-                path:'/login',
-                element:<Login></Login>
-            },
-            {   
-                  
-                path:'/product/:brand_id',
-                element:<BrandDetails></BrandDetails>
-               
-                
-            },{
-                path:'/singleProduct/:_id',
-                element:<SingleProduct></SingleProduct>,
-                loader:({params})=>fetch(`https://fashion-and-apparel-server-ps09l1sek-amina-sultana-s-projects.vercel.app/product/${params.id}`)
-            },
 
-            {
-                path:'/contact',
-                element:<Contact></Contact>
-            }
-           
-        ]
-    }
-])
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/product/:brand_id",
+        element: <BrandDetails></BrandDetails>,
+      },
+      {
+        path: "/singleProduct/:id",
+        element: <SingleProduct></SingleProduct>,
+        loader: ({params}) => fetch(
+            `https://fashion-and-apparel-server-three.vercel.app/product/${params.id}`
+          ),
+      },
+      {
+        path: "/myCart/:id",
+        element: <MyCart></MyCart>,
+        loader: ({params}) => fetch(
+            `https://fashion-and-apparel-server-three.vercel.app/carts/${params.id} `
+          ),
+      },
+      
+
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
+      },
+    ],
+  },
+]);
 
 export default router;
